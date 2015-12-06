@@ -8,6 +8,11 @@
 
 #import "BNRConstants.h"
 
-@implementation BNRConstants
+NSString *const     kSeriversUUID       = @"FF80";
+NSString *const     kWriteCharUUID      = @"FF81";
+NSString *const     kReadCharUUID       = @"FF82";
 
-@end
+
+NSString *const     kSeriversUUID1      = @"FF12";
+NSString *const     kWriteCharUUID1     = @"FF01";
+NSString *const     kReadCharUUID1      = @"FF02";

@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		1BE0B5331C0ACDA4002A24A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5321C0ACDA4002A24A5 /* main.m */; };
 		1BE0B5361C0ACDA4002A24A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5351C0ACDA4002A24A5 /* AppDelegate.m */; };
-		1BE0B5391C0ACDA4002A24A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5381C0ACDA4002A24A5 /* ViewController.m */; };
 		1BE0B53C1C0ACDA4002A24A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0B53A1C0ACDA4002A24A5 /* Main.storyboard */; };
 		1BE0B53E1C0ACDA4002A24A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0B53D1C0ACDA4002A24A5 /* Assets.xcassets */; };
 		1BE0B5411C0ACDA4002A24A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0B53F1C0ACDA4002A24A5 /* LaunchScreen.storyboard */; };
 		1BE0B54C1C0ACDA4002A24A5 /* BleChatRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B54B1C0ACDA4002A24A5 /* BleChatRoomTests.m */; };
 		1BE0B5571C0ACDA5002A24A5 /* BleChatRoomUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5561C0ACDA5002A24A5 /* BleChatRoomUITests.m */; };
+		1BE0B5681C0AD134002A24A5 /* BNRPeripheralTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5671C0AD134002A24A5 /* BNRPeripheralTVC.m */; };
+		1BE0B56B1C0AD1E7002A24A5 /* BNRBLECentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B56A1C0AD1E7002A24A5 /* BNRBLECentral.m */; };
+		1BE0B56E1C0AD24C002A24A5 /* BNRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B56D1C0AD24C002A24A5 /* BNRConstants.m */; };
+		1BE0B5711C0AE540002A24A5 /* BNRChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5701C0AE540002A24A5 /* BNRChatRoom.m */; };
+		1BE0B5741C0AF916002A24A5 /* BNRBLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5731C0AF916002A24A5 /* BNRBLEPeripheral.m */; };
+		1BE0B5771C0B1127002A24A5 /* BNRMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0B5761C0B1127002A24A5 /* BNRMainVC.m */; };
+		E679F7711DF1A71679C3E729 /* libPods-BleChatRoom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6F618B9956724697551EB /* libPods-BleChatRoom.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BAB7B7C7B032DDBE48FAA52 /* Pods-BleChatRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleChatRoom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BleChatRoom/Pods-BleChatRoom.debug.xcconfig"; sourceTree = "<group>"; };
 		1BE0B52E1C0ACDA4002A24A5 /* BleChatRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleChatRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0B5321C0ACDA4002A24A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BE0B5341C0ACDA4002A24A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BE0B5351C0ACDA4002A24A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1BE0B5371C0ACDA4002A24A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1BE0B5381C0ACDA4002A24A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1BE0B53B1C0ACDA4002A24A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE0B53D1C0ACDA4002A24A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE0B5401C0ACDA4002A24A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +56,20 @@
 		1BE0B5521C0ACDA5002A24A5 /* BleChatRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleChatRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0B5561C0ACDA5002A24A5 /* BleChatRoomUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BleChatRoomUITests.m; sourceTree = "<group>"; };
 		1BE0B5581C0ACDA5002A24A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE0B5661C0AD134002A24A5 /* BNRPeripheralTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRPeripheralTVC.h; path = ViewController/BNRPeripheralTVC.h; sourceTree = "<group>"; };
+		1BE0B5671C0AD134002A24A5 /* BNRPeripheralTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRPeripheralTVC.m; path = ViewController/BNRPeripheralTVC.m; sourceTree = "<group>"; };
+		1BE0B5691C0AD1E7002A24A5 /* BNRBLECentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRBLECentral.h; path = Communication/BNRBLECentral.h; sourceTree = "<group>"; };
+		1BE0B56A1C0AD1E7002A24A5 /* BNRBLECentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRBLECentral.m; path = Communication/BNRBLECentral.m; sourceTree = "<group>"; };
+		1BE0B56C1C0AD24C002A24A5 /* BNRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRConstants.h; path = Communication/BNRConstants.h; sourceTree = "<group>"; };
+		1BE0B56D1C0AD24C002A24A5 /* BNRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRConstants.m; path = Communication/BNRConstants.m; sourceTree = "<group>"; };
+		1BE0B56F1C0AE540002A24A5 /* BNRChatRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRChatRoom.h; path = ViewController/BNRChatRoom.h; sourceTree = "<group>"; };
+		1BE0B5701C0AE540002A24A5 /* BNRChatRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRChatRoom.m; path = ViewController/BNRChatRoom.m; sourceTree = "<group>"; };
+		1BE0B5721C0AF916002A24A5 /* BNRBLEPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRBLEPeripheral.h; path = Communication/BNRBLEPeripheral.h; sourceTree = "<group>"; };
+		1BE0B5731C0AF916002A24A5 /* BNRBLEPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRBLEPeripheral.m; path = Communication/BNRBLEPeripheral.m; sourceTree = "<group>"; };
+		1BE0B5751C0B1127002A24A5 /* BNRMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRMainVC.h; path = ViewController/BNRMainVC.h; sourceTree = "<group>"; };
+		1BE0B5761C0B1127002A24A5 /* BNRMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRMainVC.m; path = ViewController/BNRMainVC.m; sourceTree = "<group>"; };
+		A59FF969964609B723FAC9FA /* Pods-BleChatRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleChatRoom.release.xcconfig"; path = "Pods/Target Support Files/Pods-BleChatRoom/Pods-BleChatRoom.release.xcconfig"; sourceTree = "<group>"; };
+		FEE6F618B9956724697551EB /* libPods-BleChatRoom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BleChatRoom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E679F7711DF1A71679C3E729 /* libPods-BleChatRoom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +105,8 @@
 				1BE0B54A1C0ACDA4002A24A5 /* BleChatRoomTests */,
 				1BE0B5551C0ACDA5002A24A5 /* BleChatRoomUITests */,
 				1BE0B52F1C0ACDA4002A24A5 /* Products */,
+				8EA9D7380D525B1FAE6437F0 /* Pods */,
+				A147FE9CE5864FF7B16A5795 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +123,10 @@
 		1BE0B5301C0ACDA4002A24A5 /* BleChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				1BE0B5651C0AD0E5002A24A5 /* Communication */,
+				1BE0B5641C0AD0CE002A24A5 /* ViewController */,
 				1BE0B5341C0ACDA4002A24A5 /* AppDelegate.h */,
 				1BE0B5351C0ACDA4002A24A5 /* AppDelegate.m */,
-				1BE0B5371C0ACDA4002A24A5 /* ViewController.h */,
-				1BE0B5381C0ACDA4002A24A5 /* ViewController.m */,
 				1BE0B53A1C0ACDA4002A24A5 /* Main.storyboard */,
 				1BE0B53D1C0ACDA4002A24A5 /* Assets.xcassets */,
 				1BE0B53F1C0ACDA4002A24A5 /* LaunchScreen.storyboard */,
@@ -140,6 +162,49 @@
 			path = BleChatRoomUITests;
 			sourceTree = "<group>";
 		};
+		1BE0B5641C0AD0CE002A24A5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BE0B5661C0AD134002A24A5 /* BNRPeripheralTVC.h */,
+				1BE0B5671C0AD134002A24A5 /* BNRPeripheralTVC.m */,
+				1BE0B56F1C0AE540002A24A5 /* BNRChatRoom.h */,
+				1BE0B5701C0AE540002A24A5 /* BNRChatRoom.m */,
+				1BE0B5751C0B1127002A24A5 /* BNRMainVC.h */,
+				1BE0B5761C0B1127002A24A5 /* BNRMainVC.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1BE0B5651C0AD0E5002A24A5 /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				1BE0B5691C0AD1E7002A24A5 /* BNRBLECentral.h */,
+				1BE0B56A1C0AD1E7002A24A5 /* BNRBLECentral.m */,
+				1BE0B56C1C0AD24C002A24A5 /* BNRConstants.h */,
+				1BE0B56D1C0AD24C002A24A5 /* BNRConstants.m */,
+				1BE0B5721C0AF916002A24A5 /* BNRBLEPeripheral.h */,
+				1BE0B5731C0AF916002A24A5 /* BNRBLEPeripheral.m */,
+			);
+			name = Communication;
+			sourceTree = "<group>";
+		};
+		8EA9D7380D525B1FAE6437F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BAB7B7C7B032DDBE48FAA52 /* Pods-BleChatRoom.debug.xcconfig */,
+				A59FF969964609B723FAC9FA /* Pods-BleChatRoom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A147FE9CE5864FF7B16A5795 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEE6F618B9956724697551EB /* libPods-BleChatRoom.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BE0B55B1C0ACDA5002A24A5 /* Build configuration list for PBXNativeTarget "BleChatRoom" */;
 			buildPhases = (
+				42E44677EAC6D7D10070FDB8 /* Check Pods Manifest.lock */,
 				1BE0B52A1C0ACDA4002A24A5 /* Sources */,
 				1BE0B52B1C0ACDA4002A24A5 /* Frameworks */,
 				1BE0B52C1C0ACDA4002A24A5 /* Resources */,
+				EAAB7D2AA6CAC68D3759EB3A /* Embed Pods Frameworks */,
+				3050E5BE3334D72CED06C8AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,13 +333,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3050E5BE3334D72CED06C8AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BleChatRoom/Pods-BleChatRoom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42E44677EAC6D7D10070FDB8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAAB7D2AA6CAC68D3759EB3A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BleChatRoom/Pods-BleChatRoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BE0B52A1C0ACDA4002A24A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE0B5391C0ACDA4002A24A5 /* ViewController.m in Sources */,
+				1BE0B56B1C0AD1E7002A24A5 /* BNRBLECentral.m in Sources */,
+				1BE0B5711C0AE540002A24A5 /* BNRChatRoom.m in Sources */,
+				1BE0B5681C0AD134002A24A5 /* BNRPeripheralTVC.m in Sources */,
+				1BE0B56E1C0AD24C002A24A5 /* BNRConstants.m in Sources */,
 				1BE0B5361C0ACDA4002A24A5 /* AppDelegate.m in Sources */,
+				1BE0B5741C0AF916002A24A5 /* BNRBLEPeripheral.m in Sources */,
+				1BE0B5771C0B1127002A24A5 /* BNRMainVC.m in Sources */,
 				1BE0B5331C0ACDA4002A24A5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,9 +532,11 @@
 		};
 		1BE0B55C1C0ACDA5002A24A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BAB7B7C7B032DDBE48FAA52 /* Pods-BleChatRoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BleChatRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moyotech.BleChatRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +545,11 @@
 		};
 		1BE0B55D1C0ACDA5002A24A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59FF969964609B723FAC9FA /* Pods-BleChatRoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BleChatRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moyotech.BleChatRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +623,7 @@
 				1BE0B55D1C0ACDA5002A24A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BE0B55E1C0ACDA5002A24A5 /* Build configuration list for PBXNativeTarget "BleChatRoomTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +632,7 @@
 				1BE0B5601C0ACDA5002A24A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BE0B5611C0ACDA5002A24A5 /* Build configuration list for PBXNativeTarget "BleChatRoomUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +641,7 @@
 				1BE0B5631C0ACDA5002A24A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNRConstants : NSObject
 
-@end
+extern NSString *const     kSeriversUUID;
+extern NSString *const     kWriteCharUUID;
+extern NSString *const     kReadCharUUID;
+
+
+
+extern NSString *const     kSeriversUUID1;
+extern NSString *const     kWriteCharUUID1;
+extern NSString *const     kReadCharUUID1;

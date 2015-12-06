@@ -7,7 +7,7 @@
 //
 
 #import "BNRMainVC.h"
-
+#import "BNRChatRoom.h"
 @interface BNRMainVC ()
 
 @end
@@ -22,6 +22,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)pushClientVC:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BNRChatRoom *chatRoomVC = [sb instantiateViewControllerWithIdentifier:@"chatRoom"];
+    chatRoomVC.chatRoomType = ChatRoomTypeClient;
+    [self.navigationController pushViewController:chatRoomVC animated:YES];
 }
 
 /*

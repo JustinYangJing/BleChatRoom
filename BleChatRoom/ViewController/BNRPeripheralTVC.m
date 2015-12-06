@@ -7,9 +7,11 @@
 //
 
 #import "BNRPeripheralTVC.h"
-
-@interface BNRPeripheralTVC ()
-
+#import "BNRBLECentral.h"
+#import "BNRChatRoom.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+@interface BNRPeripheralTVC ()<BNRBLECentralDelegate>
+@property (nonatomic,weak) BNRBLECentral *manager;
 @end
 
 @implementation BNRPeripheralTVC
@@ -18,10 +20,13 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
+    self.manager = [BNRBLECentral sharedInstance];
+    self.manager.delegate = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.manager scanPeripheralWithTimeOut:0];
+    });
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,70 +34,61 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - BNRBLECentralDelegate
+-(void)discoverPeripherals{
+    [self.tableView reloadData];
+}
+-(void)didConnectToPeripheral{
+    
+    [MBProgressHUD hideAllHUDsForView:self.view.window animated:YES];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BNRChatRoom *chatRoomVC = [sb instantiateViewControllerWithIdentifier:@"chatRoom"];
+    chatRoomVC.chatRoomType = ChatRoomTypeHost;
+    [self.navigationController pushViewController:chatRoomVC animated:YES];
+}
+
+-(void)occurError:(NSError *)error{
+    [MBProgressHUD hideAllHUDsForView:self.view.window animated:NO];
+    MBProgressHUD *loadHUD = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+    loadHUD.labelText = [NSString stringWithFormat:@"%@",error];
+    [loadHUD hide:YES afterDelay:3];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.manager.peripherals.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSDictionary *peripheralDic = self.manager.peripherals[indexPath.row];
+    CBPeripheral *peripheral = peripheralDic[@"peripheral"];
+    NSNumber *rssi = peripheralDic[@"rssi"];
+    cell.textLabel.text = peripheral.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",rssi];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [MBProgressHUD hideAllHUDsForView:self.view.window animated:NO];
+    MBProgressHUD *loadHUD = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+    loadHUD.labelText = @"connecting...";
+    [self.manager connectPeralWithIndex:indexPath.row];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//    BNRChatRoom *chatRoomVC = [segue destinationViewController];
+//    chatRoomVC.chatRoomType = ChatRoomTypeHost;
+//    NSIndexPath *path = [self.tableView indexPathForCell:sender];
+//    [self.manager connectPeralWithIndex:path.row];
 }
-*/
 
 @end
